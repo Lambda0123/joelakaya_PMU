@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JOELAKAYA PMU — Pronostics & Résultats</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#07130d;color:#f5f7f5}
+.wrap{max-width:1200px;margin:auto;padding:18px}
+header{background:linear-gradient(135deg,#0d5b36,#092b1c);border:1px solid #24754a;border-radius:22px;padding:22px;box-shadow:0 12px 35px #0008}
+.brand{font-size:clamp(34px,6vw,68px);font-weight:900;letter-spacing:2px;color:#fff}.brand span{color:#ffd43b}
+.subtitle{margin-top:7px;color:#c7ddd0;font-size:16px}
+.notice{margin-top:16px;background:#fff3cd;color:#4b3a00;padding:12px 15px;border-radius:12px;font-weight:700}
+.hero{display:grid;grid-template-columns:1.35fr .65fr;gap:18px;margin-top:18px}
+.card{background:#0d2117;border:1px solid #1e4731;border-radius:18px;padding:20px;box-shadow:0 10px 30px #0005}
+h2,h3{margin:0 0 10px}.big{font-size:clamp(25px,4vw,42px);font-weight:900}.muted{color:#9fb3a8}
+.count{font-size:clamp(28px,5vw,48px);font-weight:900;color:#ffd43b;margin-top:14px}
+.info{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:15px}.pill{background:#102d20;padding:12px;border-radius:12px;text-align:center}.pill b{display:block;font-size:18px}.pill small{color:#91aa9d}
+.toolbar{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}.toolbar button{border:1px solid #28543d;background:#0c2419;color:#fff;padding:11px 14px;border-radius:10px;font-weight:800;cursor:pointer}.toolbar button.active{background:#18a866;border-color:#18a866;color:#04150c}.search{flex:1;min-width:220px;border:1px solid #28543d;background:#091b12;color:#fff;padding:11px 14px;border-radius:10px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.section{margin-bottom:18px}
+.bet{border-top:1px solid #1c3c2b;padding:15px 0}.bet:first-child{border-top:0}.bethead{display:flex;justify-content:space-between;gap:10px;align-items:center}.type{color:#70e6a9;font-weight:900}.numbers{font-size:25px;font-weight:900;letter-spacing:2px;margin:7px 0}.numbers span{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;background:#17442f;border-radius:50%;margin-right:5px}.confidence{font-size:12px;color:#a7bbb1}
+.race{display:grid;grid-template-columns:90px 1fr auto;gap:12px;align-items:center;border-top:1px solid #1c3c2b;padding:14px 0}.race:first-child{border-top:0}.time{font-weight:900;font-size:18px}.result{font-weight:900;text-align:right}.status{display:inline-block;padding:5px 8px;border-radius:99px;background:#183a29;color:#8de5b6;font-size:11px}
+footer{text-align:center;color:#81978b;padding:18px 0 25px;font-size:12px}
+@media(max-width:800px){.hero,.grid{grid-template-columns:1fr}.info{grid-template-columns:1fr}.race{grid-template-columns:70px 1fr}.result{grid-column:2;text-align:left}.brand{font-size:38px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="brand">JOELAKAYA <span>PMU</span></div>
+  <div class="subtitle">Pronostics • courses • compte à rebours • résultats</div>
+  <div class="notice">⚠️ Les pronostics sont des sélections, pas des garanties de gain. Une course hippique reste incertaine.</div>
+</header>
+
+<section class="hero">
+  <div class="card">
+    <div class="muted">🏇 PROCHAINE COURSE SUIVIE</div>
+    <div class="big">Quinté+ — Chantilly</div>
+    <p>Samedi 19 septembre 2026 • départ prévu à <b>15:15</b></p>
+    <div class="info">
+      <div class="pill"><b>R1C1</b><small>Course</small></div>
+      <div class="pill"><b>15:15</b><small>Départ</small></div>
+      <div class="pill"><b id="remaining">--:--:--</b><small>Compte à rebours</small></div>
+    </div>
+  </div>
+  <div class="card">
+    <h2>⏱️ Quand voir le résultat ?</h2>
+    <p class="muted">Le résultat peut être affiché quelques minutes après l'arrivée. Actualisez la page après la course.</p>
+    <div class="count" id="clock">--:--:--</div>
+    <p class="muted">Heure locale de votre ordinateur</p>
+  </div>
+</section>
+
+<div class="toolbar">
+<button class="active" data-filter="all">Tous</button>
+<button data-filter="simple">Simple</button><button data-filter="couple">Couplé</button>
+<button data-filter="2sur4">2 sur 4</button><button data-filter="tierce">Tiercé</button>
+<button data-filter="quarte">Quarté+</button><button data-filter="quinte">Quinté+</button>
+<button data-filter="multi">Multi</button>
+<input id="search" class="search" placeholder="Rechercher un jeu…">
+</div>
+
+<div class="grid">
+<main class="card section">
+<h2>🎯 3 propositions par jeu</h2>
+<p class="muted">Construites à partir d'une logique de sélection et de couverture. Elles ne sont pas présentées comme des paris certains.</p>
+<div id="bets"></div>
+</main>
+
+<aside>
+<div class="card section">
+<h2>🏁 Résultats des courses</h2>
+<p class="muted">La page conserve une zone de contrôle pour comparer les arrivées avec les propositions.</p>
+<div id="races">
+<div class="race"><div class="time">15:15</div><div><b>Quinté+ — Chantilly</b><br><span class="muted">Résultat à consulter après l'arrivée</span></div><div class="result"><span class="status">À VENIR</span></div></div>
+<div class="race"><div class="time">—</div><div><b>Prochaine course</b><br><span class="muted">Actualisation des données</span></div><div class="result"><span class="status">EN ATTENTE</span></div></div>
+</div>
+</div>
+
+<div class="card">
+<h2>📊 Sélection du jour</h2>
+<p>Base : <b>13 — 12 — 14 — 4 — 10</b></p>
+<p class="muted">Cette base reprend des chevaux cités dans les sélections consultées pour la course. Vérifiez toujours le programme officiel et les rapports avant de jouer.</p>
+</div>
+</aside>
+</div>
+<footer>Cette page est réalisée par <strong>JOELAKAYA</strong> • Données et horaires susceptibles de changer.</footer>
+</div>
+
+<script>
+const sets=[
+["simple","Simple gagnant / placé",[13,12,14,4,10]],
+["couple","Couplé",[13,12,14,4,10]],
+["2sur4","2 sur 4",[13,12,14,4,10]],
+["tierce","Tiercé",[13,12,14]],
+["tierce","Tiercé",[12,13,14]],
+["tierce","Tiercé",[4,10,13]],
+["quarte","Quarté+",[13,12,14,4]],
+["quarte","Quarté+",[12,13,14,10]],
+["quarte","Quarté+",[13,14,4,10]],
+["quinte","Quinté+",[13,12,14,4,10]],
+["quinte","Quinté+",[12,13,14,10,4]],
+["quinte","Quinté+",[13,14,4,10,12]],
+["multi","Multi",[13,12,14,4,10]],
+["multi","Multi",[13,12,14,10,4]],
+["multi","Multi",[13,14,10,4,12]]
+];
+let filter="all";
+function render(){
+ const q=document.getElementById("search").value.toLowerCase();
+ const arr=sets.filter(x=>(filter==="all"||x[0]===filter)&&(!q||x[1].toLowerCase().includes(q)));
+ document.getElementById("bets").innerHTML=arr.map((x,i)=>`<div class="bet"><div class="bethead"><span class="type">${x[1]} — Proposition ${i%3+1}</span><span class="confidence">Sélection</span></div><div class="numbers">${x[2].map(n=>`<span>${n}</span>`).join("")}</div><div class="confidence">Ordre proposé : ${x[2].join(" — ")}</div></div>`).join("")||"<p class='muted'>Aucune proposition.</p>";
+}
+document.querySelectorAll("[data-filter]").forEach(b=>b.onclick=()=>{document.querySelectorAll("[data-filter]").forEach(x=>x.classList.remove("active"));b.classList.add("active");filter=b.dataset.filter;render()});
+document.getElementById("search").oninput=render;
+
+const target=new Date("2026-09-19T15:15:00");
+function tick(){
+ const now=new Date(), d=target-now;
+ document.getElementById("clock").textContent=now.toLocaleTimeString("fr-FR");
+ if(d>0){let s=Math.floor(d/1000),days=Math.floor(s/86400);s%=86400;let h=Math.floor(s/3600);s%=3600;let m=Math.floor(s/60);s%=60;document.getElementById("remaining").textContent=`${days}j ${String(h).padStart(2,"0")}:${String(m).padStart(2,"0")}:${String(s).padStart(2,"0")}`}
+ else document.getElementById("remaining").textContent="Départ passé";
+}
+render();tick();setInterval(tick,1000);
+</script>
+</body></html>
