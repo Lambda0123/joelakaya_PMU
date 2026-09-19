@@ -1,0 +1,168 @@
+{
+  "race": {
+    "date": "2026-09-19",
+    "hippodrome": "Chantilly",
+    "reunion": "R1",
+    "course": "C4",
+    "name": "Prix du Cabinet des Livres",
+    "heure": "15:15",
+    "partants": 16
+  },
+  "sources": [
+    {
+      "page": "Page 1 — Outil Turfiste / presse",
+      "url": "https://www.outilturfiste.com/",
+      "pronostic": [
+        12,
+        4,
+        13,
+        2,
+        1,
+        14,
+        9,
+        15
+      ]
+    },
+    {
+      "page": "Page 2 — ZEturf",
+      "url": "https://www.zeturf.fr/fr/course-du-jour/2026-09-19/R1C4-equidia",
+      "pronostic": [
+        12,
+        4,
+        13,
+        2,
+        1,
+        14,
+        9,
+        15
+      ]
+    },
+    {
+      "page": "Page 3 — Rue des Joueurs",
+      "url": "https://www.ruedesjoueurs.com/turf/pronostic-turf/course/19-09-2026/R1/C4/prix-du-cabinet-des-livres.html",
+      "pronostic": [
+        13,
+        12,
+        4,
+        14,
+        7,
+        16,
+        10,
+        15
+      ]
+    },
+    {
+      "page": "Page 4 — CanalTurf journaliste",
+      "url": "https://www.canalturf.com/courses_quinte.php",
+      "pronostic": [
+        13,
+        12,
+        14,
+        4,
+        10,
+        2,
+        7,
+        8
+      ]
+    },
+    {
+      "page": "Page 5 — CanalTurf joueurs",
+      "url": "https://www.canalturf.com/concours_pronostics.php/1000",
+      "pronostic": [
+        13,
+        12,
+        4,
+        7,
+        2,
+        14,
+        9,
+        1
+      ]
+    },
+    {
+      "page": "Page 6 — Zone-Turf",
+      "url": "https://www.zone-turf.fr/quinte/aujourdhui/",
+      "pronostic": [
+        12,
+        14,
+        13,
+        16,
+        4,
+        2,
+        5,
+        15
+      ]
+    },
+    {
+      "page": "Page 7 — G-BET / G.A.L.O.P.",
+      "url": "https://www.gbet.fr/courses/chantilly/2026-09-19/r1/c4/prix-du-cabinet-des-livres/",
+      "pronostic": [
+        13,
+        12,
+        7,
+        4,
+        10,
+        14,
+        1,
+        5
+      ]
+    }
+  ],
+  "official_result": [
+    5,
+    1,
+    12,
+    8,
+    2
+  ],
+  "horse_factors": {
+    "13": {
+      "nom": "HEROISTE",
+      "forme": "3p-6p-1p-5p-3p",
+      "cote_snapshot": "5.8",
+      "note": "Très présent dans les sélections de presse; 3 ans, forme récente intéressante."
+    },
+    "12": {
+      "nom": "SCHUMAN",
+      "forme": "4p-8p-3p-5p-0p",
+      "cote_snapshot": "8.9",
+      "note": "Très forte convergence des sources; régularité et bon profil pour le sprint."
+    },
+    "4": {
+      "nom": "GRAND SCOOP",
+      "forme": "3p-1p-2p-7p-2p",
+      "cote_snapshot": "13.0",
+      "note": "Régularité élevée; présent très souvent dans les synthèses."
+    },
+    "2": {
+      "nom": "PROFUMO DI IENA",
+      "forme": "8p-5p-4p-4p-6p",
+      "cote_snapshot": "14.0",
+      "note": "Souvent retenu dans les sélections, avec un profil compétitif."
+    },
+    "14": {
+      "nom": "MIKEY",
+      "forme": "3p-2p-4p-1p-1p",
+      "cote_snapshot": "12.0",
+      "note": "Très bonne forme récente et régulièrement cité."
+    },
+    "1": {
+      "nom": "LESSLEPASSER",
+      "forme": "0p-5p-3p-5p-5p",
+      "cote_snapshot": "19.0",
+      "note": "Moins cité que les favoris mais finalement 2e; exemple d'outsider que la convergence seule peut sous-estimer."
+    },
+    "8": {
+      "nom": "ROYALWOOD",
+      "forme": "7p-0p-0p-8p-6p",
+      "cote_snapshot": "26.0",
+      "note": "Peu présent dans les synthèses de tête; finalement 4e."
+    },
+    "5": {
+      "nom": "INTERACTIV",
+      "forme": "6p-0p-9p-3p-3p",
+      "cote_snapshot": "12.0",
+      "note": "Peu cité par les synthèses, mais vainqueur réel; montre la limite de toute méthode prédictive."
+    }
+  }
+}
