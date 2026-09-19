@@ -1,0 +1,140 @@
+{
+  "race": {
+    "date": "2026-09-20",
+    "hippodrome": "Paris-Vincennes",
+    "reunion": "R1",
+    "course": "C4",
+    "name": "Prix d'Ancenis",
+    "heure": "15:15",
+    "partants": 13,
+    "discipline": "Trot attelé",
+    "distance": "2700 m",
+    "type": "Course Européenne - Course D"
+  },
+  "sources": [
+    {
+      "page": "Page 1 — Zone-Turf",
+      "url": "https://www.zone-turf.fr/quinte/demain/",
+      "pronostic": [
+        9,
+        8,
+        2,
+        4,
+        13,
+        12,
+        1,
+        7
+      ]
+    },
+    {
+      "page": "Page 2 — RTL / Dominique Cordier",
+      "url": "https://www.rtl.fr/sport/autres-sports/quinte-du-dimanche-20-septembre-2026-a-vincennes-les-pronostics-7900674352",
+      "pronostic": [
+        11,
+        8,
+        9,
+        5,
+        12,
+        10,
+        7
+      ]
+    },
+    {
+      "page": "Page 3 — Canalturf / Nicolas Labourasse",
+      "url": "https://www.canalturf.com/pronostics-PMU/2026-09-20/paris-vincennes/418331_prix-d-ancenis.html",
+      "pronostic": [
+        12,
+        11,
+        9,
+        1,
+        5,
+        2,
+        13,
+        10
+      ]
+    },
+    {
+      "page": "Page 4 — Canalturf synthèse presse",
+      "url": "https://www.canalturf.com/pronostics-PMU/2026-09-20/paris-vincennes/418331_prix-d-ancenis.html",
+      "pronostic": [
+        9,
+        12,
+        13,
+        4,
+        8,
+        1,
+        5,
+        7,
+        11,
+        2
+      ]
+    }
+  ],
+  "partants": [
+    [
+      1,
+      "Toscana Southwind",
+      "3a-0a-Da-7a-1a-5a-Da-2a"
+    ],
+    [
+      2,
+      "Dilva Jet",
+      "0a-4a-3a-6a-0a-2a-5a-Da"
+    ],
+    [
+      3,
+      "Junkie",
+      "0a-0a-5a-3a-9a-5a-4a-0a"
+    ],
+    [
+      4,
+      "Dada Del Ronco",
+      "7a-3a-2a-4a-0a-8a-8a"
+    ],
+    [
+      5,
+      "Faxima",
+      "4a-Da-4a-0a-4a-4a-3a-6a"
+    ],
+    [
+      6,
+      "Hana d'Occagnes",
+      "0m-7a-3a-7a-0a-8a-9a-Da"
+    ],
+    [
+      7,
+      "Junon de Lou",
+      "5a-Da-5a-Da-1a-2a-5a-1a"
+    ],
+    [
+      8,
+      "Jane Cash",
+      "7a-8a-0a-2a-1a-9a-2a-9a"
+    ],
+    [
+      9,
+      "Jalouz d'Oliverie",
+      "2a-0a-2a-2a-0a-9a-4a-8a"
+    ],
+    [
+      10,
+      "Iris Rivoise",
+      "3a-9a-0a-7a-4a-8a-Da-4a"
+    ],
+    [
+      11,
+      "Idole Jallerie",
+      "Da-Da-1a-Da-Da-3a-3a-1a"
+    ],
+    [
+      12,
+      "Jitane Vallee",
+      "3a-1a-2a-2a-3a-1a-3a-6a"
+    ],
+    [
+      13,
+      "Diva Del Ronco",
+      "8a-6a-Da-3a-7a-2a-1a-0a"
+    ]
+  ]
+}

@@ -1,0 +1,30 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>JOELAKAYA PMU — Prochaine course</title><link rel="stylesheet" href="style.css"></head><body>
+<header><div class="brand">JOELAKAYA <span>PMU</span></div><p>Nouvelle course • pronostics multi-sources • convergence</p><div class="notice">⚠ Les pronostics sont des sélections, pas une garantie de gain.</div></header>
+<main>
+<div class="back"><a class="next-race-btn" href="index.html">← Retour aux résultats récents</a></div>
+<section class="race-head"><div><small>PROCHAINE COURSE — QUINTÉ+</small><h1>Prix d'Ancenis — Vincennes</h1><p>Dimanche 20 septembre 2026 • R1C4 • départ 15h15 • 13 partantes • 2 700 m</p></div><div class="status">À VENIR</div></section>
+<section><h2>📚 Pronostics des différentes pages</h2><p class="sub">Chaque source est affichée séparément. La convergence est calculée à partir des sélections publiées.</p><div id="sources" class="grid"></div></section>
+<section><h2>🔎 Chevaux qui se répètent</h2><div id="consensus"></div></section>
+<section><h2>🧠 Étude synthétique</h2><div id="horses" class="horse-grid"></div></section>
+<section><h2>🎯 Propositions pour les différents jeux</h2><div id="bets" class="bets"></div><div class="warning">Ces propositions sont une synthèse informative des sources et des données disponibles. Aucune méthode ne peut garantir l'arrivée réelle.</div></section>
+<section><h2>🐎 Partants</h2><div id="partants" class="horse-grid"></div></section>
+</main><footer>JOELAKAYA PMU — Prochaine course</footer>
+<script>
+async function go(){
+ const d=await (await fetch('data/prochaine-course.json')).json();
+ const c={}; const r={};
+ d.sources.forEach(s=>s.pronostic.forEach((n,i)=>{c[n]=(c[n]||0)+1;r[n]=(r[n]||0)+i+1}));
+ const order=Object.keys(c).map(Number).sort((a,b)=>c[b]-c[a] || r[a]-r[b]);
+ document.getElementById('sources').innerHTML=d.sources.map(s=>'<article class="source"><h3>'+s.page+'</h3><a href="'+s.url+'" target="_blank" rel="noopener">Voir la source ↗</a><div class="numbers">'+s.pronostic.map((n,i)=>'<span class="num">'+n+'</span>').join('')+'</div></article>').join('');
+ document.getElementById('consensus').innerHTML=order.map((n,i)=>'<div class="consensus-row"><b>#'+(i+1)+'</b><strong>'+n+'</strong><div class="bar"><i style="width:'+c[n]/d.sources.length*100+'%"></i></div><span>'+c[n]+'/'+d.sources.length+'</span><small>rg '+(r[n]/c[n]).toFixed(1)+'</small></div>').join('');
+ const p=order.slice(0,8);
+ document.getElementById('horses').innerHTML=p.map(n=>{const x=d.partants.find(q=>q[0]===n);return '<article class="horse"><strong>'+n+' — '+(x?x[1]:'')+'</strong><p>Présence dans '+c[n]+' sources • rang moyen '+(r[n]/c[n]).toFixed(1)+'</p><div class="factor">Musique : '+(x?x[2]:'')+'</div></article>'}).join('');
+ document.getElementById('bets').innerHTML=[
+ ['Simple gagnant','n°'+p[0]],['Simple placé','n°'+p[0]+' / n°'+p[1]],['Couplé',p.slice(0,2).join(' — ')],
+ ['2 sur 4',p.slice(0,4).join(' — ')],['Tiercé',p.slice(0,3).join(' — ')],['Quarté+',p.slice(0,4).join(' — ')],
+ ['Quinté+',p.slice(0,5).join(' — ')],['Multi',p.slice(0,6).join(' — ')]
+ ].map(x=>'<article class="bet"><h3>'+x[0]+'</h3><div class="ticket">'+x[1]+'</div></article>').join('');
+ document.getElementById('partants').innerHTML=d.partants.map(x=>'<article class="horse"><strong>'+x[0]+' — '+x[1]+'</strong><div class="factor">'+x[2]+'</div></article>').join('');
+}
+go();
+</script></body></html>

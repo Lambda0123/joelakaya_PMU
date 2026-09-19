@@ -9,3 +9,9 @@ section{background:#082018;border:1px solid #174b37;border-radius:16px;padding:2
 .horse-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.horse{background:#0a281d;border:1px solid #205c43;border-radius:12px;padding:14px}.horse strong{font-size:20px;color:#ffd22b}.horse .factor{color:#b9d5c7;font-size:13px}.bets{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.bet{background:#0b2b20;border:1px solid #205b42;border-radius:12px;padding:16px}.bet h3{color:#ffd22b;margin-top:0}.ticket{font-size:24px;font-weight:900;letter-spacing:2px}.warning{margin-top:15px;padding:14px;background:#4a3210;border:1px solid #8a6520;border-radius:10px;color:#ffe7a0}
 .result{display:flex;gap:8px;flex-wrap:wrap}.real{background:#19a968!important}.result .num{background:#123f2e}.muted{color:#94b5a5}footer{text-align:center;padding:30px;color:#6e9682}
 @media(max-width:800px){.grid,.horse-grid,.bets,.consensus-wrap{grid-template-columns:1fr}.brand{font-size:34px}.race-head{flex-direction:column}.consensus-row{grid-template-columns:35px 1fr 65px 55px}}
+
+.next-race-button-wrap{text-align:center;margin:16px 0}
+.next-race-btn{display:inline-block;background:#ffd22b;color:#07170f;text-decoration:none;font-weight:900;padding:14px 22px;border-radius:12px;border:1px solid #e4bb25}
+.next-race-btn:hover{filter:brightness(1.05)}
+.hypo-gain{font-size:20px;color:#ffd22b}
+#hypo-gains{background:#09251a}
