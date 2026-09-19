@@ -15,3 +15,13 @@ section{background:#082018;border:1px solid #174b37;border-radius:16px;padding:2
 .next-race-btn:hover{filter:brightness(1.05)}
 .hypo-gain{font-size:20px;color:#ffd22b}
 #hypo-gains{background:#09251a}
+
+.tariff-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.tariff{background:#0b2b20;border:1px solid #205b42;border-radius:12px;padding:15px}
+.tariff strong{font-size:22px;color:#ffd22b}.tariff p{color:#9fc1af;font-size:12px}
+.pro-card{background:#0b2b20;border:1px solid #2c7354;border-radius:14px;padding:18px;margin-bottom:14px}
+.pro-card h3{color:#ffd22b}.pro-card a{color:#83e8b7}
+.pro-horse{background:#0a281d;border:1px solid #205c43;border-radius:12px;padding:14px;margin:10px 0}
+.pro-head{display:flex;justify-content:space-between;gap:10px}.pro-head strong{color:#ffd22b;font-size:19px}.pro-head span{background:#164b35;padding:5px 9px;border-radius:8px;font-size:12px}
+.pro-warning{margin-top:14px;background:#4a3210;border:1px solid #8a6520;border-radius:10px;padding:13px;color:#ffe7a0}
+@media(max-width:800px){.tariff-grid{grid-template-columns:repeat(2,1fr)}.pro-head{flex-direction:column}}

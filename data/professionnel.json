@@ -1,0 +1,94 @@
+{
+  "professional": {
+    "source_name": "Nicolas Labourasse — journaliste hippique, Canalturf",
+    "source_url": "https://www.canalturf.com/pronostics-PMU/2026-09-20/paris-vincennes/418331_prix-d-ancenis.html",
+    "intro": "Nicolas Labourasse présente le 12 Jitane Vallée comme sa base, en s'appuyant notamment sur sa grande régularité récente et ses performances dans des courses B. Il retient ensuite 11 Idole Jallerie, 9 Jalouz d'Oliverie, 1 Toscana Southwind et 5 Faxima parmi ses chances régulières.",
+    "horses": [
+      {
+        "n": 12,
+        "name": "Jitane Vallée",
+        "role": "BASE",
+        "summary": "Très régulière : le journaliste souligne 11 arrivées dans les trois premiers lors de ses 12 dernières sorties, avec une victoire le 9 août et une 3e place le 7 septembre."
+      },
+      {
+        "n": 11,
+        "name": "Idole Jallerie",
+        "role": "BASE",
+        "summary": "Elle reste délicate mais a déjà gagné un Quinté+ sur la grande piste. Le retour de Franck Nivard est présenté comme un élément favorable."
+      },
+      {
+        "n": 9,
+        "name": "Jalouz d'Oliverie",
+        "role": "CHANCE RÉGULIÈRE",
+        "summary": "Deuxième à plusieurs reprises récemment et encore deuxième le 12 septembre à Vincennes : sa forme et son aptitude au parcours sont mises en avant."
+      },
+      {
+        "n": 1,
+        "name": "Toscana Southwind",
+        "role": "CHANCE RÉGULIÈRE",
+        "summary": "Venue de Suède, elle a montré de bons moyens en France et a terminé 3e le 12 septembre derrière Jalouz d'Oliverie."
+      },
+      {
+        "n": 5,
+        "name": "Faxima",
+        "role": "CHANCE RÉGULIÈRE",
+        "summary": "Malgré ses 11 ans, elle reste compétitive. Ses deux dernières 4es places dans des courses D sont jugées encourageantes."
+      },
+      {
+        "n": 2,
+        "name": "Dilva Jet",
+        "role": "OUTSIDER",
+        "summary": "Malchanceuse le 12 septembre et régulière auparavant : le journaliste la présente comme un outsider séduisant."
+      },
+      {
+        "n": 13,
+        "name": "Diva del Ronco",
+        "role": "OUTSIDER",
+        "summary": "Septième malchanceuse dans la course de référence et auparavant 3e puis 2e : elle est retenue comme autre outsider intéressant."
+      },
+      {
+        "n": 10,
+        "name": "Iris Rivoise",
+        "role": "COUP DE FOLIE",
+        "summary": "Ses performances récentes lui donnent une petite chance pour une place selon la synthèse de Nicolas Labourasse."
+      }
+    ]
+  },
+  "tariffs": [
+    [
+      "Simple Gagnant / Placé",
+      "1,50 €",
+      "Minimum de référence"
+    ],
+    [
+      "Couplé",
+      "1,50 €",
+      "Minimum de référence"
+    ],
+    [
+      "2 sur 4",
+      "3,00 €",
+      "Minimum de référence"
+    ],
+    [
+      "Tiercé",
+      "1,00 €",
+      "Minimum de référence"
+    ],
+    [
+      "Quarté+",
+      "1,30 €",
+      "Minimum de référence"
+    ],
+    [
+      "Quinté+",
+      "2,00 €",
+      "Minimum de référence"
+    ],
+    [
+      "Multi",
+      "3,00 €",
+      "Minimum de référence"
+    ]
+  ]
+}
